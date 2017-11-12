@@ -32,7 +32,8 @@ class ViewController: UIViewController {
             
             let location = CGPoint(x: Double(arc4random_uniform(300)), y: Double(arc4random_uniform(600)))
             
-            let bot = BotShapeView(frame: CGRect(x: location.x, y: location.y, width: 30, height: 30))
+            let bot = BotShapeView(frame: CGRect(x: location.x, y: location.y, width: 15 * 2, height: 15))
+            bot.radius = 15
             bot.layer.cornerRadius = bot.radius
             bot.backgroundColor = UIColor.red
             
@@ -41,7 +42,6 @@ class ViewController: UIViewController {
         }
         
         for bot in botShapeView {
-            
             
             self.view.addSubview(bot)
             
